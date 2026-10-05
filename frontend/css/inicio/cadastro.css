@@ -1,0 +1,191 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: "Sora", sans-serif;
+}
+
+.background {
+min-height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+padding: 20px 40px;
+align-items: center;
+background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.border {
+width: 1000px;
+min-height: 610px;
+background: linear-gradient(135deg, #42010b 16%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border-radius: 48px;
+border: 3px solid aliceblue;
+padding: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 8px;
+}
+
+.border h1, .border p {
+margin: 0;
+color: white;
+}
+
+.border h1 {
+font-size: 30px;
+font-weight: 700;
+letter-spacing: -1px;
+}
+
+.border p {
+font-size: 15px;
+font-weight: 400;
+letter-spacing: -1px;
+}
+
+.logos {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 18px;
+padding: 10px 18px;
+}
+
+.logos img {
+width: auto;
+height: 100px;
+max-width: 42%;
+}
+
+.divisor {
+width: 0.5px;
+height: 38px;
+background-color: silver;
+}
+
+.logoAacd {
+clip-path: inset(0 0 10% 0);
+transform: translateY(7px);
+}
+
+.botoes {
+width: 100%;
+max-width: 420px;
+}
+
+.campoLogin {
+color: white;
+width: 100%;
+max-width: 420px;
+padding: 14px 16px;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 1px solid white;
+border-radius: 10px;
+font-size: 16px;
+}
+
+.campoLogin::placeholder {
+color: rgba(255, 255, 255, 0.8);
+}
+
+.campoLogin:focus {
+outline: none;
+border-color: #ffffff;
+box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.botaoCadastrar {
+width: 100%;
+padding: 14px;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 1px solid white;
+border-radius: 10px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.campoComIcone {
+position: relative;
+width: 100%;
+max-width: 420px;
+}
+
+.campoComIcone .campoLogin {
+width: 100%;
+max-width: none;
+padding-left: 50px;
+padding-right: 50px;
+}
+
+.iconeCampo {
+position: absolute;
+top: 50%;
+left: 16px;
+transform: translateY(-50%);
+width: 22px;
+height: 22px;
+pointer-events: none;
+filter: brightness(0) invert(1);
+}
+
+.campoComIcone .campoLogin {
+width: 100%;
+max-width: none;
+padding-left: 50px;
+padding-right: 50px;
+}
+
+.botaoOlho {
+position: absolute;
+top: 50%;
+right: 14.5px;
+transform: translateY(-50%);
+padding: 2px;
+background: transparent;
+border: none;
+cursor: pointer;
+filter: brightness(0) invert(1);
+}
+
+.botaoOlho img {
+display: block;
+width: 25px;
+height: 30px;
+}
+
+.linkLogin {
+display: block;
+margin-top: 12px;
+color: white;
+font-size: 13px;
+text-align: center;
+text-decoration: none;
+}
+
+.linkLogin:hover,
+.linkLogin:focus-visible {
+text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+.background {
+padding: 20px;
+}
+
+.border {
+min-height: auto;
+padding: 24px 18px;
+border-radius: 32px;
+}
+
+.logos img {
+height: 70px;
+}
+
+}

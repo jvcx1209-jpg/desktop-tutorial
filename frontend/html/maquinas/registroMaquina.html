@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Máquina | AACD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/maquinas/registroMaquina.css">
+    <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <form class="border" id="formRegistroMaquina" aria-labelledby="tituloRegistroMaquina" novalidate>
+
+            <a class="linkVoltar" href="../menu/central.html">&larr; Voltar à central</a>
+
+            <div class="logos">
+                <img class="logoAacd" src="../../imagens/inicio/logos/logo-aacd.webp" alt="Logo da AACD">
+                <span class="divisor" aria-hidden="true"></span>
+                <img src="../../imagens/inicio/logos/logo-maua.svg" alt="Logo do Instituto Mauá de Tecnologia">
+            </div>
+
+            <span class="etiqueta">Rede de impressão 3D</span>
+            <h1 id="tituloRegistroMaquina">Registro de Máquina</h1>
+            <p>Cadastre uma impressora 3D disponível para atender às demandas da AACD:</p>
+
+            <!-- 1. identificação -->
+            <fieldset class="secao">
+                <legend>Identificação</legend>
+
+                <div class="grade">
+                    <label class="campo campoLargo">
+                        <span>Nome / apelido da máquina</span>
+                        <input class="campoLogin" type="text" name="nome" placeholder="Ex.: Ender 3 - Lab 2" required>
+                    </label>
+
+                    <label class="campo">
+                        <span>Fabricante</span>
+                        <input class="campoLogin" type="text" name="fabricante" placeholder="Ex.: Creality" required>
+                    </label>
+
+                    <label class="campo">
+                        <span>Modelo</span>
+                        <input class="campoLogin" type="text" name="modelo" placeholder="Ex.: Ender 3 V2" required>
+                    </label>
+
+                    <label class="campo">
+                        <span>Tecnologia</span>
+                        <select class="campoLogin campoSelect" name="tecnologia" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="FDM">FDM (filamento)</option>
+                            <option value="SLA">SLA (resina)</option>
+                            <option value="DLP">DLP (resina)</option>
+                            <option value="SLS">SLS (pó)</option>
+                        </select>
+                    </label>
+
+                    <label class="campo">
+                        <span>Nº de série (opcional)</span>
+                        <input class="campoLogin" type="text" name="numeroSerie" placeholder="Ex.: CR-123456">
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- 2. especificações técnicas (usadas no matchmaking) -->
+            <fieldset class="secao">
+                <legend>Especificações técnicas</legend>
+
+                <div class="grade">
+                    <div class="campo campoLargo">
+                        <span>Volume de impressão (mm)</span>
+                        <div class="linhaVolume">
+                            <input class="campoLogin" type="number" name="volumeX" placeholder="X" min="1" required aria-label="Largura (X) em mm">
+                            <span class="vezes">×</span>
+                            <input class="campoLogin" type="number" name="volumeY" placeholder="Y" min="1" required aria-label="Profundidade (Y) em mm">
+                            <span class="vezes">×</span>
+                            <input class="campoLogin" type="number" name="volumeZ" placeholder="Z" min="1" required aria-label="Altura (Z) em mm">
+                        </div>
+                    </div>
+
+                    <label class="campo">
+                        <span>Diâmetro do bico (mm)</span>
+                        <input class="campoLogin" type="number" name="diametroBico" placeholder="Ex.: 0.4" step="0.1" min="0.1">
+                    </label>
+
+                    <label class="campo">
+                        <span>Resolução mínima de camada (mm)</span>
+                        <input class="campoLogin" type="number" name="resolucaoCamada" placeholder="Ex.: 0.1" step="0.01" min="0.01">
+                    </label>
+
+                    <div class="campo campoLargo" role="group" aria-labelledby="tituloMateriais">
+                        <span id="tituloMateriais">Materiais suportados</span>
+                        <div class="opcoesMateriais">
+                            <label class="chip"><input type="checkbox" name="materiais" value="PLA"><span>PLA</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="PETG"><span>PETG</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="ABS"><span>ABS</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="TPU"><span>TPU (flexível)</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="NYLON"><span>Nylon</span></label>
+                            <label class="chip"><input type="checkbox" name="materiais" value="RESINA"><span>Resina</span></label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- 3. local e disponibilidade -->
+            <fieldset class="secao">
+                <legend>Local e disponibilidade</legend>
+
+                <div class="grade">
+                    <label class="campo">
+                        <span>Instituição / laboratório</span>
+                        <input class="campoLogin" type="text" name="instituicao" placeholder="Ex.: FabLab Mauá" required>
+                    </label>
+
+                    <label class="campo">
+                        <span>Cidade</span>
+                        <input class="campoLogin" type="text" name="cidade" placeholder="Ex.: São Caetano do Sul" required>
+                    </label>
+
+                    <label class="campo">
+                        <span>UF</span>
+                        <select class="campoLogin campoSelect" name="uf" required>
+                            <option value="" disabled selected>UF</option>
+                            <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option>
+                            <option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                            <option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option>
+                            <option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                            <option>SP</option><option>SE</option><option>TO</option>
+                        </select>
+                    </label>
+
+                    <label class="campo">
+                        <span>Horas disponíveis por semana</span>
+                        <input class="campoLogin" type="number" name="horasSemana" placeholder="Ex.: 20" min="1" max="168" required>
+                    </label>
+
+                    <label class="campo">
+                        <span>Status atual</span>
+                        <select class="campoLogin campoSelect" name="status" required>
+                            <option value="DISPONIVEL" selected>Disponível</option>
+                            <option value="EM_USO">Em uso</option>
+                            <option value="MANUTENCAO">Em manutenção</option>
+                        </select>
+                    </label>
+
+                    <label class="campo">
+                        <span>Homologação</span>
+                        <select class="campoLogin campoSelect" name="homologacao">
+                            <option value="PENDENTE" selected>Pendente (AACD irá avaliar)</option>
+                            <option value="HOMOLOGADA">Homologada</option>
+                        </select>
+                    </label>
+
+                    <label class="campo campoLargo">
+                        <span>Observações (opcional)</span>
+                        <textarea class="campoLogin" name="observacoes" rows="3" placeholder="Ex.: bico endurecido, mesa aquecida, câmara fechada..."></textarea>
+                    </label>
+                </div>
+            </fieldset>
+
+            <p class="mensagem" id="mensagemRegistroMaquina" role="alert" aria-live="polite"></p>
+
+            <div class="botoes">
+                <button class="botaoSecundario" type="reset">Limpar</button>
+                <button class="botaoCadastrar" type="submit">Registrar máquina</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="../../js/maquinas/registroMaquina.js"></script>
+</body>
+
+</html>
