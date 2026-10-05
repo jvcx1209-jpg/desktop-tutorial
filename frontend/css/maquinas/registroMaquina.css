@@ -1,0 +1,345 @@
+/* registro de máquina: mesmo card do Figma (cadastro), só que mais largo e com seções */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+.background {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #42010b 26%, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.border {
+    position: relative;
+    width: 1000px;
+    background: linear-gradient(135deg, #42010b 16%, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+    border-radius: 48px;
+    border: 3px solid aliceblue;
+    padding: 30px 60px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.border h1,
+.border > p {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.border h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.border > p {
+    font-size: 15px;
+    letter-spacing: -0.5px;
+}
+
+.linkVoltar {
+    position: absolute;
+    top: 28px;
+    left: 36px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.linkVoltar:hover,
+.linkVoltar:focus-visible {
+    text-decoration: underline;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 4px 18px;
+}
+
+.logos img {
+    width: auto;
+    height: 80px;
+    max-width: 42%;
+}
+
+.divisor {
+    width: 0.5px;
+    height: 38px;
+    background-color: silver;
+}
+
+.logoAacd {
+    clip-path: inset(0 0 10% 0);
+    transform: translateY(7px);
+}
+
+.etiqueta {
+    padding: 6px 12px;
+    color: white;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* seções */
+
+.secao {
+    width: 100%;
+    margin: 14px 0 0;
+    padding: 18px 22px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 20px;
+    background: rgba(66, 1, 11, 0.18);
+}
+
+.secao legend {
+    padding: 0 10px;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.campoLargo {
+    grid-column: 1 / -1;
+}
+
+.campo > span {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* campos (mesmo estilo do Figma) */
+
+.campoLogin {
+    color: white;
+    width: 100%;
+    padding: 12px 14px;
+    background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+    border: 1px solid white;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+textarea.campoLogin {
+    resize: vertical;
+}
+
+.campoLogin::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.campoLogin:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.campoLogin.invalido {
+    border-color: #42010b;
+    box-shadow: 0 0 0 3px rgba(66, 1, 11, 0.45);
+}
+
+.campoSelect {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 34px;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"),
+        linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+        right 10px center,
+        center;
+    background-size:
+        20px,
+        100% 100%;
+}
+
+.campoSelect option {
+    color: #42010b;
+    background: white;
+}
+
+.linhaVolume {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.vezes {
+    color: white;
+    font-weight: 700;
+}
+
+/* materiais em formato de "chip" */
+
+.opcoesMateriais {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 4px;
+    border-radius: 12px;
+}
+
+.opcoesMateriais.invalido {
+    box-shadow: 0 0 0 3px rgba(66, 1, 11, 0.45);
+}
+
+.chip input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.chip span {
+    display: inline-block;
+    padding: 8px 14px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.chip input:checked + span {
+    color: #42010b;
+    background: white;
+}
+
+.chip input:focus-visible + span {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+/* mensagem e botões */
+
+.mensagem {
+    min-height: 20px;
+    margin: 8px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mensagem.erro {
+    color: #fff3c4;
+}
+
+.mensagem.sucesso {
+    color: white;
+}
+
+.botoes {
+    width: 100%;
+    max-width: 520px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.botaoCadastrar,
+.botaoSecundario {
+    width: 100%;
+    padding: 14px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.botaoCadastrar {
+    background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.botaoSecundario {
+    background: transparent;
+}
+
+.botaoCadastrar:hover,
+.botaoSecundario:hover {
+    transform: translateY(-2px);
+}
+
+.botaoCadastrar:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+@media (max-width: 760px) {
+    .background {
+        padding: 20px 16px;
+    }
+
+    .border {
+        padding: 64px 16px 24px;
+        border-radius: 32px;
+    }
+
+    .linkVoltar {
+        top: 22px;
+        left: 22px;
+    }
+
+    .logos img {
+        height: 60px;
+    }
+
+    .secao {
+        padding: 14px;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .botoes {
+        grid-template-columns: 1fr;
+    }
+}

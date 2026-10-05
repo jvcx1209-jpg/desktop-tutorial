@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/menu/central.css">
+    <title>Menu | AACD </title>
+    <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <header class="cabecalho">
+            <div class="retanguloFifa">
+                <div class="perfilInformacoes">
+                    <strong>Olá, [Nome do Usuário]</strong>
+                    <span>Medico</span>
+
+                </div>
+
+                <div class="perfilPonta">MD</div>
+
+            </div>
+
+            <div class="acoesPerfil">
+                <button class="hamburguer" type="button" aria-label="Abrir Menu">
+                    <img src="../../imagens/menu/icones/hamburger.svg" alt="">
+                </button>
+
+                <img class="logoInstituicao" src="../../imagens/menu/logos/logo-aacd-branco.png" alt="Logo da AACD">
+
+                <img class="logoMaua" src="../../imagens/menu/logos/logo-maua.svg"
+                    alt="Logo do Instituto Mauá de Tecnologia">
+            </div>
+
+        </header>
+
+        <nav class="barradomenu" aria-label="Menu principal">
+            <button class="aba ativa" type="button">Central</button>
+            <button class="aba" type="button">Demandas</button>
+            <button class="aba" type="button">Impressoras</button>
+            <button class="aba" type="button">Produção</button>
+            <button class="aba" type="button">Qualidade</button>
+            <button class="aba" type="button">Histórico</button>
+        </nav>
+
+
+        <!-- os números e as demandas abaixo são exemplos até o backend ter os endpoints -->
+        <section class="blocos">
+
+            <!-- bloco grande: demandas recentes -->
+            <div class="bloco blocoPrincipal">
+                <div class="tituloBloco">
+                    <h2>Demandas recentes</h2>
+                    <a href="#">Ver todas</a>
+                </div>
+
+                <ul class="listaDemandas">
+                    <li class="demanda">
+                        <div>
+                            <strong>Órtese de punho - infantil</strong>
+                            <span>PLA · FabLab Mauá</span>
+                        </div>
+                        <span class="status statusProducao">Em produção</span>
+                    </li>
+                    <li class="demanda">
+                        <div>
+                            <strong>Adaptador de talher</strong>
+                            <span>TPU · aguardando impressora</span>
+                        </div>
+                        <span class="status statusAberta">Aberta</span>
+                    </li>
+                    <li class="demanda">
+                        <div>
+                            <strong>Suporte para tablet - cadeira de rodas</strong>
+                            <span>PETG · Lab. Engenharia</span>
+                        </div>
+                        <span class="status statusQualidade">Em qualidade</span>
+                    </li>
+                    <li class="demanda">
+                        <div>
+                            <strong>Engrossador de lápis</strong>
+                            <span>TPU · FabLab Santo André</span>
+                        </div>
+                        <span class="status statusConcluida">Concluída</span>
+                    </li>
+                    <li class="demanda">
+                        <div>
+                            <strong>Prótese de mão - dedos</strong>
+                            <span>PLA · aguardando impressora</span>
+                        </div>
+                        <span class="status statusAberta">Aberta</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- bloco superior direito: números da rede -->
+            <div class="bloco blocoInferiorEsquerdo">
+                <div class="indicadores">
+                    <div class="indicador">
+                        <strong>12</strong>
+                        <span>Impressoras na rede</span>
+                    </div>
+                    <div class="indicador">
+                        <strong>8</strong>
+                        <span>Disponíveis agora</span>
+                    </div>
+                    <div class="indicador">
+                        <strong>5</strong>
+                        <span>Demandas abertas</span>
+                    </div>
+                    <div class="indicador">
+                        <strong>3</strong>
+                        <span>Em produção</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- blocos pequenos: atalhos -->
+            <a class="bloco atalho blocoInferiorDireito" href="../maquinas/registroMaquina.html">
+                <span class="iconeAtalho" aria-hidden="true">+</span>
+                <strong>Registrar máquina</strong>
+                <span>Adicione uma impressora 3D à rede</span>
+            </a>
+
+            <a class="bloco atalho blocoInferiorCentral" href="../admin/cadastroAdmin.html">
+                <span class="iconeAtalho" aria-hidden="true">&#9733;</span>
+                <strong>Cadastrar admin</strong>
+                <span>Dê acesso administrativo a alguém</span>
+            </a>
+
+            <a class="bloco atalho blocoInferiorCima" href="#">
+                <span class="iconeAtalho" aria-hidden="true">&#9776;</span>
+                <strong>Nova demanda</strong>
+                <span>Registre uma peça para fabricação</span>
+            </a>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
