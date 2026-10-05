@@ -1,0 +1,572 @@
+
+
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: "Sora", sans-serif;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+.background {
+min-height: 100vh;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding: 20px 40px;
+align-items: stretch;
+background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.cabecalho {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 8px 4px 18px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.identidade {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.logos {
+display: flex;
+align-items: center;
+gap: 18px;
+}
+
+.logos img {
+width: auto;
+height: 48px;
+object-fit: contain;
+}
+
+.logos .logoAacd {
+width: 155px;
+}
+
+.logos .logoMaua {
+width: 125px;
+}
+
+.divisor {
+width: 1px;
+height: 35px;
+background: rgba(255, 255, 255, 0.6);
+}
+
+.nomeProjeto {
+display: flex;
+flex-direction: column;
+gap: 3px;
+color: white;
+}
+
+.nomeProjeto strong {
+font-size: 18px;
+}
+
+.nomeProjeto span {
+font-size: 10px;
+color: rgba(255, 255, 255, 0.75);
+}
+
+.menuPrincipal {
+display: flex;
+align-items: center;
+gap: 28px;
+margin-left: auto;
+margin-right: 34px;
+}
+
+.menuPrincipal a {
+position: relative;
+padding: 10px 0;
+color: rgba(255, 255, 255, 0.82);
+font-size: 12px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.menuPrincipal a::after {
+position: absolute;
+left: 0;
+bottom: 3px;
+width: 0;
+height: 2px;
+background: white;
+content: "";
+transition: width 0.2s;
+}
+
+.menuPrincipal a:hover::after {
+width: 100%;
+}
+
+.opcoesCabecalho {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.botaoEntrar,
+.botaoCadastrar {
+padding: 10px 20px;
+border: 1px solid white;
+border-radius: 10px;
+text-decoration: none;
+font-size: 13px;
+font-weight: 600;
+transition: transform 0.2s;
+}
+
+.botaoEntrar {
+color: white;
+}
+
+.botaoEntrar:hover {
+transform: translateY(-2px);
+}
+
+.botaoCadastrar {
+transition: transform 0.2s;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.botaoCadastrar:hover {
+transform: translateY(-2px);
+}
+
+.conteudoInicial {
+position: relative;
+width: 100%;
+height: 440px;
+display: flex;
+align-items: stretch;
+margin-top: 22px;
+overflow: hidden;
+background: #42010b;
+border: 1px solid rgba(255, 255, 255, 0.4);
+border-radius: 20px;
+}
+
+.textoDestaque {
+position: relative;
+z-index: 2;
+order: 2;
+width: 36%;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+flex-direction: column;
+padding: 38px;
+}
+
+.etiquetaDestaque {
+padding: 7px 12px;
+color: white;
+background: rgba(255, 255, 255, 0.14);
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 1px solid rgba(255, 255, 255, 0.28);
+border-radius: 20px;
+font-size: 11px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+border-color: white;
+}
+
+.textoDestaque h1 {
+max-width: 680px;
+margin: 20px 0 16px;
+color: white;
+font-size: clamp(28px, 2.8vw, 42px);
+line-height: 1.08;
+letter-spacing: -1.5px;
+}
+
+.textoDestaque p {
+max-width: 630px;
+margin: 0;
+color: rgba(255, 255, 255, 0.78);
+font-size: 13px;
+line-height: 1.6;
+}
+
+.botaoDestaque {
+margin-top: 26px;
+padding: 13px 22px;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: none;
+border-radius: 10px;
+font-size: 12px;
+font-weight: 700;
+text-decoration: none;
+transition: transform 0.2s;
+border: 1px solid white;
+}
+
+.botaoDestaque:hover { /*isso aq faz o botao subir, mo chave*/
+transform: translateY(-2px);
+}
+
+.informacaoDestaque {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-top: 28px;
+color: white;
+font-size: 12px;
+font-weight: 600;
+}
+
+.pontoDestaque {
+width: 10px;
+height: 10px;
+background: #d9253f;
+border: 2px solid #f7a0ad;
+border-radius: 50%;
+box-shadow: 0 0 0 4px rgba(217, 37, 63, 0.1);
+}
+
+.fotoCrianca {
+position: relative;
+order: 1;
+width: 64%;
+height: 100%;
+overflow: hidden;
+}
+
+.fotoCrianca img {
+width: 100%;
+height: 100%;
+display: block;
+object-fit: cover;
+object-position: center 10%;
+}
+
+.sobreProjeto {
+width: 100%;
+display: grid;
+grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+gap: 70px;
+align-items: start;
+padding: 85px 70px;
+color: white;
+}
+
+.tituloSobreProjeto > span {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+.tituloSobreProjeto h2 {
+max-width: 720px;
+margin: 12px 0 0;
+font-size: clamp(32px, 4vw, 52px);
+line-height: 1.12;
+letter-spacing: -1.8px;
+}
+
+.conteudoSobreProjeto {
+padding-top: 23px;
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.conteudoSobreProjeto > p {
+margin: 0;
+color: rgba(255, 255, 255, 0.82);
+font-size: 14px;
+line-height: 1.8;
+}
+
+.destaqueSobreProjeto {
+display: flex;
+flex-direction: column;
+gap: 7px;
+margin-top: 28px;
+padding-left: 18px;
+border-left: 3px solid white;
+}
+
+.destaqueSobreProjeto strong {
+font-size: 15px;
+}
+
+.destaqueSobreProjeto span {
+color: rgba(255, 255, 255, 0.72);
+font-size: 11px;
+line-height: 1.6;
+}
+
+.linkSobreProjeto {
+width: fit-content;
+display: block;
+margin-top: 28px;
+padding: 12px 20px;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 1px solid white;
+border-radius: 10px;
+font-size: 12px;
+font-weight: 700;
+text-decoration: none;
+transition: transform 0.2s;
+}
+
+.linkSobreProjeto:hover { /*isso aq faz o botao subir*/
+transform: translateY(-2px);
+}
+
+.historiaAacd {
+width: 100%;
+margin-top: 22px;
+padding: 70px 18px 52px;
+}
+
+.tituloHistoria {
+max-width: 700px;
+margin: 0 auto 46px;
+color: white;
+text-align: center;
+}
+
+.tituloHistoria > span {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+.tituloHistoria h2 {
+margin: 8px 0;
+font-size: 32px;
+letter-spacing: -1px;
+}
+
+.tituloHistoria p {
+margin: 0;
+color: rgba(255, 255, 255, 0.78);
+font-size: 13px;
+line-height: 1.6;
+}
+
+.linhaTempoHistoria {
+position: relative;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 0;
+}
+
+.marcoHistoria {
+position: relative;
+z-index: 1;
+display: flex;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+padding: 0 32px;
+text-align: center;
+}
+
+.anoHistoria {
+width: 56px;
+height: 56px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 4px solid rgba(255, 255, 255, 0.9);
+border-radius: 50%;
+font-size: 13px;
+font-weight: 700;
+}
+
+.textoHistoria h3 {
+margin: 0 0 10px;
+color: white;
+font-size: 17px;
+line-height: 1.35;
+}
+
+.textoHistoria p {
+margin: 0;
+color: rgba(255, 255, 255, 0.78);
+font-size: 12px;
+line-height: 1.65;
+}
+
+.linkHistoria {
+width: fit-content;
+display: block;
+margin: 34px auto 0;
+padding-bottom: 4px;
+color: white;
+border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+font-size: 12px;
+font-weight: 700;
+text-decoration: none;
+}
+
+.linkHistoria:hover {
+border-bottom-color: white;
+}
+
+.rodape {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 30px 4px 14px;
+color: white;
+border-top: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.linksRodape {
+display: flex;
+gap: 24px;
+}
+
+.linksRodape a {
+color: rgba(255, 255, 255, 0.82);
+font-size: 11px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.linksRodape a:hover {
+color: white;
+}
+
+
+@media (max-width: 1050px) {
+.nomeProjeto {
+display: none;
+}
+
+.menuPrincipal {
+margin-right: 20px;
+gap: 18px;
+}
+}
+
+@media (max-width: 850px) {
+.background {
+padding: 15px;
+}
+
+.cabecalho {
+padding: 12px;
+}
+
+.nomeProjeto {
+display: none;
+}
+
+.menuPrincipal {
+display: none;
+}
+
+.logos img {
+height: 40px;
+}
+
+.logos .logoAacd {
+width: 118px;
+}
+
+.logos .logoMaua {
+width: 92px;
+}
+
+.botaoEntrar,
+.botaoCadastrar {
+padding: 9px 12px;
+font-size: 11px;
+}
+
+.conteudoInicial {
+min-height: auto;
+height: auto;
+flex-direction: column;
+}
+
+.textoDestaque,
+.fotoCrianca {
+width: 100%;
+}
+
+.textoDestaque {
+padding: 35px 25px;
+}
+
+.textoDestaque h1 {
+font-size: 34px;
+letter-spacing: -1px;
+}
+
+.fotoCrianca {
+position: relative;
+height: 300px;
+}
+
+.sobreProjeto {
+grid-template-columns: 1fr;
+gap: 30px;
+padding: 55px 25px;
+}
+
+.tituloSobreProjeto h2 {
+font-size: 32px;
+letter-spacing: -1px;
+}
+
+.conteudoSobreProjeto {
+padding-top: 20px;
+}
+
+.historiaAacd {
+padding: 30px 20px;
+}
+
+.tituloHistoria h2 {
+font-size: 27px;
+}
+
+.linhaTempoHistoria {
+display: flex;
+flex-direction: column;
+gap: 34px;
+}
+
+.marcoHistoria {
+width: 100%;
+min-height: auto;
+padding: 0;
+}
+
+.rodape {
+padding: 28px 4px 10px;
+}
+
+.linksRodape {
+flex-wrap: wrap;
+gap: 12px 20px;
+}
+
+}

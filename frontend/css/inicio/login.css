@@ -1,0 +1,234 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+}
+
+.background {
+min-height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+padding: 40px;
+align-items: center;
+background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.login {
+width: 1000px;
+height: 530px;
+background: linear-gradient(135deg, #42010b 16%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border-radius: 48px;
+border: 3px solid aliceblue;
+padding: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 8px;
+}
+
+.login h1, .login p {
+margin: 0;
+color: white;
+}
+
+.campoLogin {
+color: white;
+width: 100%;
+max-width: 420px;
+padding: 14px 16px;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 1px solid white;
+border-radius: 10px;
+font-size: 16px;
+}
+
+.campoLogin::placeholder {
+color: rgba(255, 255, 255, 0.8);
+}
+
+.campoLogin:focus {
+outline: none;
+border-color: #ffffff;
+box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.botoes {
+width: 100%;
+max-width: 420px;
+}
+
+.botaoEntrar {
+width: 100%;
+padding: 14px;
+color: white;
+background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+border: 1px solid white;
+border-radius: 10px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.campoComIcone {
+position: relative;
+width: 100%;
+max-width: 420px;
+}
+
+.iconeCampo {
+position: absolute;
+top: 50%;
+left: 16px;
+transform: translateY(-50%);
+width: 22px;
+height: 22px;
+pointer-events: none;
+filter: brightness(0) invert(1);
+}
+
+.campoComIcone .campoLogin {
+width: 100%;
+max-width: none;
+padding-left: 50px;
+padding-right: 50px;
+}
+
+.botaoOlho {
+position: absolute;
+top: 50%;
+right: 14.5px;
+transform: translateY(-50%);
+padding: 2px;
+background: transparent;
+border: none;
+cursor: pointer;
+filter: brightness(0) invert(1);
+}
+
+.botaoOlho img {
+display: block;
+width: 25px;
+height: 30px;
+}
+
+.logos {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 18px;
+padding: 10px 18px;
+}
+
+.logos img {
+width: auto;
+height: 100px;
+max-width: 42%;
+}
+
+.divisor {
+width: 0.5px;
+height: 38px;
+background-color: silver;
+}
+
+.logoAacd {
+clip-path: inset(0 0 10% 0);
+transform: translateY(7px);
+}
+
+.opcoesLogin {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+max-width: 420px;
+margin-top: 10px;
+}
+
+.lembrarAcesso {
+display: flex;
+align-items: center;
+gap: 10px;
+color: white;
+font-family: "Sora", sans-serif;
+font-size: 13px;
+cursor: pointer;
+}
+
+.lembrarAcesso input {
+width: 16px;
+height: 16px;
+accent-color: red   ;
+cursor: pointer;
+align-items: flex-end;
+margin: 0px;
+}
+
+.esqueceuSenha {
+display: flex;
+justify-content: flex-end;
+max-width: 420px;
+width: 100%;
+text-decoration: none;
+white-space: nowrap;
+color: white;
+}
+
+.esqueceuSenhaBotao {
+padding: 0;
+color: white;
+background: transparent;
+border: none;
+font-family: "Sora", sans-serif;
+font-size: 13px;
+font-weight: 400;
+cursor: pointer;
+text-decoration: none;
+}
+
+.esqueceuSenhaBotao:hover {
+color: white;
+text-decoration: underline;
+}
+
+.linkCadastro {
+display: inline-flex;
+align-items: center;
+margin: 0;
+position: absolute;
+left: 48%;
+transform: translateX(-50%);
+color: white;
+font-family: "Sora", sans-serif;
+font-size: 13px;
+font-weight: 400;
+line-height: 1;
+text-align: center;
+text-decoration: none;
+white-space: nowrap;
+}
+
+.linkCadastro:hover,
+.linkCadastro:focus-visible {
+text-decoration: underline;
+}
+
+/* Deixa essa classe aqui em espera.. vou pensar se coloco ela dnv
+.esqueceuSenhaBotao {
+padding: 0;
+height: auto;
+width: auto;
+background: linear-gradient(150deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+transform: translateX(-198px);
+border: 1px solid white;
+cursor: pointer;
+font-family: "Sora", sans-serif;
+font-size: 13px;
+font-weight: 600;
+color: white;
+}
+*/
