@@ -1,0 +1,344 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: "Sora", sans-serif;
+}
+
+.background {
+position: relative;
+min-height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: flex-start;
+padding: 20px 40px;
+background: linear-gradient(135deg, #42010b 26%,  #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.barradomenu {
+display: flex;
+width: 45%;
+align-self: flex-start;
+margin-left: 15%;
+height: 44px;
+gap: 2px;
+margin-bottom: 14px;
+margin-top: 60px;
+}
+
+.aba {
+flex: 1;
+padding: 0 8px;
+border: 0;
+border-radius: 0;
+background: #42010b;
+color: white;
+font-family: "Arial Narrow", Arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+text-transform: uppercase;
+cursor: pointer;
+}
+
+.aba.ativa {
+box-shadow: inset 0 -3px 0 yellow;
+background: #d9253f;
+}
+
+.blocos {
+display: grid;
+width: 70%;
+height: 600px;
+grid-template-columns: repeat(6, minmax(0, 1fr));
+grid-template-rows: 180px 1fr;
+grid-template-areas: "grande grande grande superior superior superior" "grande grande grande um dois tres";
+gap: 6px;
+}
+
+.bloco {
+background: white;
+}
+
+.blocoPrincipal     { grid-area: grande; }
+.blocoInferiorEsquerdo     { grid-area: superior; }
+.blocoInferiorDireito  { grid-area: um; }
+.blocoInferiorCentral { grid-area: dois; }
+.blocoInferiorCima { grid-area: tres; }
+
+.cabecalho {
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 70%;
+margin-top: 68px;
+margin-bottom: 20px;
+}
+
+.retanguloFifa {
+display: flex;
+width: 430px;
+height: 75px;
+flex-shrink: 0;
+transform: translatex(-150px);
+}
+
+.perfilInformacoes {
+flex: 1;
+min-width: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 4px;
+padding: 0 24px;
+background: white;
+color: #68616d;
+clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+}
+
+.perfilInformacoes strong {
+font-size: 20px;
+}
+
+.perfilInformacoes span {
+font-size: 14px;
+}
+
+.perfilPonta {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100px;
+padding-right: 20px;
+background: #858093;
+color: white;
+font-size: 28px;
+font-weight: bold;
+clip-path: polygon(0 0, 100% 0, 65% 100%, 0 100%);
+}
+
+.acoesPerfil {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.hamburguer {
+position: static;
+display: grid;
+place-items: center;
+width: 65px;
+height: 65px;
+padding: 0;
+border: 0;
+background: transparent;
+cursor: pointer;
+flex-shrink: 0;
+}
+
+.hamburguer img {
+display: block;
+width: 65px;
+height: 65px;
+filter: brightness(0) invert(1);
+}
+
+.hamburguer:focus-visible {
+outline: 2px solid #f2b84b;
+outline-offset: 4px;
+}
+
+.logoInstituicao { 
+display: block;
+width: 76px;
+height: 76px;
+object-fit: contain;
+flex-shrink: 0;
+}
+
+.logoMaua {
+display: block;
+width: 140px;
+height: 55px;
+object-fit: contain;
+flex-shrink: 0;
+filter: brightness(0) invert(1);
+}
+/* ---------- conteúdo dos blocos ---------- */
+
+.bloco {
+    min-width: 0;
+    padding: 22px;
+    color: #42010b;
+    overflow: hidden;
+}
+
+.tituloBloco {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.tituloBloco h2 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+
+.tituloBloco a {
+    color: #d9253f;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tituloBloco a:hover {
+    text-decoration: underline;
+}
+
+.listaDemandas {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.demanda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee3e5;
+}
+
+.demanda:last-child {
+    border-bottom: 0;
+}
+
+.demanda div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.demanda strong {
+    font-size: 14px;
+}
+
+.demanda div span {
+    color: #68616d;
+    font-size: 12px;
+}
+
+.status {
+    flex-shrink: 0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.statusAberta { color: #42010b; background: #fde7c2; }
+.statusProducao { color: white; background: #d9253f; }
+.statusQualidade { color: #42010b; background: #ffd3cf; }
+.statusConcluida { color: white; background: #42010b; }
+
+.indicadores {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.indicador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding-left: 14px;
+    border-left: 3px solid #d9253f;
+}
+
+.indicador strong {
+    font-size: 36px;
+    line-height: 1;
+}
+
+.indicador span {
+    color: #68616d;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.atalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    color: white;
+    background: linear-gradient(135deg, #42010b 10%, #d9253f 55%, #f2b84b 100%);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.atalho:hover {
+    transform: translateY(-3px);
+}
+
+.atalho:focus-visible {
+    outline: 3px solid white;
+    outline-offset: -6px;
+}
+
+.iconeAtalho {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    margin-bottom: auto;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.atalho strong {
+    font-size: 16px;
+}
+
+.atalho > span:last-child {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    .blocos {
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: auto;
+        grid-template-areas: "superior superior superior" "grande grande grande" "um dois tres";
+    }
+
+    .indicadores {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .atalho {
+        min-height: 170px;
+    }
+}
+
+@media (max-width: 560px) {
+    .blocos {
+        grid-template-columns: 1fr;
+        grid-template-areas: "superior" "grande" "um" "dois" "tres";
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Administrador | AACD</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="../../css/admin/cadastroAdmin.css">
+    <link rel="icon" href="../../imagens/inicio/logos/loguinho-aacd-barra.png">
+</head>
+
+<body>
+
+    <div class="background">
+
+        <form class="border" id="formCadastroAdmin" aria-labelledby="tituloCadastroAdmin" novalidate>
+
+            <a class="linkVoltar" href="../menu/central.html">&larr; Voltar à central</a>
+
+            <div class="logos">
+                <img class="logoAacd" src="../../imagens/inicio/logos/logo-aacd.webp" alt="Logo da AACD">
+                <span class="divisor" aria-hidden="true"></span>
+                <img src="../../imagens/inicio/logos/logo-maua.svg" alt="Logo do Instituto Mauá de Tecnologia">
+            </div>
+
+            <span class="etiqueta">Área administrativa</span>
+            <h1 id="tituloCadastroAdmin">Cadastro de Administrador</h1>
+            <p>Preencha os dados do novo administrador da plataforma:</p>
+
+            <div class="campoComIcone">
+                <img class="iconeCampo" src="../../imagens/inicio/icones/icone-nome.svg" alt="">
+                <input class="campoLogin" type="text" name="nome" placeholder="Nome completo" autocomplete="name" required>
+            </div>
+
+            <div class="campoComIcone">
+                <img class="iconeCampo" src="../../imagens/inicio/icones/icone-email.svg" alt="">
+                <input class="campoLogin" type="email" name="email" placeholder="E-mail institucional" autocomplete="email" required>
+            </div>
+
+            <div class="linhaCampos">
+                <select class="campoLogin campoSelect" name="instituicao" required>
+                    <option value="" disabled selected>Instituição</option>
+                    <option value="AACD">AACD</option>
+                    <option value="MAUA">Instituto Mauá de Tecnologia</option>
+                    <option value="PARCEIRO">Laboratório / FabLab parceiro</option>
+                </select>
+
+                <select class="campoLogin campoSelect" name="nivelAcesso" required>
+                    <option value="" disabled selected>Nível de acesso</option>
+                    <option value="ADMIN">Administrador</option>
+                    <option value="SUPER_ADMIN">Super administrador</option>
+                </select>
+            </div>
+
+            <div class="campoComIcone">
+                <img class="iconeCampo" src="../../imagens/inicio/icones/icone-cadeado.svg" alt="">
+                <input class="campoLogin" type="password" name="senha" placeholder="Senha (mínimo 8 caracteres)" autocomplete="new-password"
+                    minlength="8" required>
+                <button class="botaoOlho" type="button" aria-label="Mostrar senha">
+                    <img src="../../imagens/inicio/icones/icone-olho.svg" alt="">
+                </button>
+            </div>
+
+            <div class="campoComIcone">
+                <img class="iconeCampo" src="../../imagens/inicio/icones/icone-cadeado.svg" alt="">
+                <input class="campoLogin" type="password" name="confirmarSenha" placeholder="Confirmar senha" autocomplete="new-password" required>
+                <button class="botaoOlho" type="button" aria-label="Mostrar confirmação de senha">
+                    <img src="../../imagens/inicio/icones/icone-olho.svg" alt="">
+                </button>
+            </div>
+
+            <p class="mensagem" id="mensagemCadastroAdmin" role="alert" aria-live="polite"></p>
+
+            <div class="botoes">
+                <button class="botaoCadastrar" type="submit">Cadastrar administrador</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="../../js/admin/cadastroAdmin.js"></script>
+</body>
+
+</html>

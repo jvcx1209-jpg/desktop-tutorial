@@ -1,0 +1,272 @@
+/* mesmo visual da tela de cadastro (Figma), com campos extras do admin */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+.background {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #42010b 26%, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+}
+
+.border {
+    position: relative;
+    width: 1000px;
+    min-height: 640px;
+    background: linear-gradient(135deg, #42010b 16%, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+    border-radius: 48px;
+    border: 3px solid aliceblue;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.border h1,
+.border p {
+    margin: 0;
+    color: white;
+}
+
+.border h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.border p {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.linkVoltar {
+    position: absolute;
+    top: 28px;
+    left: 36px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.linkVoltar:hover,
+.linkVoltar:focus-visible {
+    text-decoration: underline;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 4px 18px;
+}
+
+.logos img {
+    width: auto;
+    height: 80px;
+    max-width: 42%;
+}
+
+.divisor {
+    width: 0.5px;
+    height: 38px;
+    background-color: silver;
+}
+
+.logoAacd {
+    clip-path: inset(0 0 10% 0);
+    transform: translateY(7px);
+}
+
+.etiqueta {
+    padding: 6px 12px;
+    color: white;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.campoLogin {
+    color: white;
+    width: 100%;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+    border: 1px solid white;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.campoLogin::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.campoLogin:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.campoLogin.invalido {
+    border-color: #42010b;
+    box-shadow: 0 0 0 3px rgba(66, 1, 11, 0.45);
+}
+
+.campoComIcone {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+}
+
+.campoComIcone .campoLogin {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.iconeCampo {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+    filter: brightness(0) invert(1);
+}
+
+.botaoOlho {
+    position: absolute;
+    top: 50%;
+    right: 14.5px;
+    transform: translateY(-50%);
+    padding: 2px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+.botaoOlho img {
+    display: block;
+    width: 25px;
+    height: 30px;
+}
+
+.linhaCampos {
+    width: 100%;
+    max-width: 420px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.campoSelect {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 34px;
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"),
+        linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position:
+        right 10px center,
+        center;
+    background-size:
+        20px,
+        100% 100%;
+}
+
+.campoSelect option {
+    color: #42010b;
+    background: white;
+}
+
+.mensagem {
+    min-height: 20px;
+    max-width: 420px;
+    font-size: 13px !important;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mensagem.erro {
+    color: #fff3c4 !important;
+}
+
+.mensagem.sucesso {
+    color: white !important;
+}
+
+.botoes {
+    width: 100%;
+    max-width: 420px;
+}
+
+.botaoCadastrar {
+    width: 100%;
+    padding: 14px;
+    color: white;
+    background: linear-gradient(135deg, #d9253f 35%, #f2b84b 70%, #ff8a80 100%);
+    border: 1px solid white;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.botaoCadastrar:hover {
+    transform: translateY(-2px);
+}
+
+.botaoCadastrar:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+
+@media (max-width: 700px) {
+    .background {
+        padding: 20px 16px;
+    }
+
+    .border {
+        min-height: auto;
+        padding: 64px 18px 24px;
+        border-radius: 32px;
+    }
+
+    .linkVoltar {
+        top: 22px;
+        left: 22px;
+    }
+
+    .logos img {
+        height: 60px;
+    }
+
+    .linhaCampos {
+        grid-template-columns: 1fr;
+    }
+}
